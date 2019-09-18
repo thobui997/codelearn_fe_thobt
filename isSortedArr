@@ -1,0 +1,21 @@
+function isSortedArray(arr){
+	if(arr.length < 2){
+		return true;
+	}
+	let status;
+	for(let i = 0; i < arr.length; i++){
+		if(arr[i] <= arr[i+1]){
+			status = true;
+		}else if(arr[i] > arr[i+1]){
+			status = false;
+			break;
+		}
+	}
+	return status;
+}
+
+function main(){
+	let arr = [25, 1, 33, 32, 30, 48, 23, 1, 19, 32];
+	return isSortedArray(arr);
+}
+main();

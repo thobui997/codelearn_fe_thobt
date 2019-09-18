@@ -1,0 +1,21 @@
+function calculateElectricBill(n) {
+
+	let congToThang = 1000, first50 = 230, next50 = 480, next49 = 700, conLai = 900;
+	if (n <= 50) {
+		return congToThang + n * first50;
+	} else if (n < 100) {
+		return congToThang + 50 * first50 + (n - 50) * next50;
+	} else if (n < 149) {
+		return congToThang + 50 * first50 + 50 * next50 + (n - 100) * next49;
+	}else{
+		return congToThang + 50 * first50 + 50 * next50 + 49 * next49 + (n-149) * conLai;
+	}
+}
+
+
+
+function main() {
+	let n = 200;
+	return calculateElectricBill(n);
+}
+main();

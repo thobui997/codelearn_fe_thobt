@@ -1,0 +1,25 @@
+function distSum(n, x, y) {
+	let sum = 0
+	if (n < 2) {
+		return sum;
+	} else {
+
+		for (let i = 0; i < x.length; i++) {
+			for (let j = i + 1; j < y.length; j++) {
+				sum += (Math.abs(x[i] - x[j]) + Math.abs(y[i] - y[j]));
+
+			}
+		}
+		return sum;
+
+	}
+
+
+}
+function main() {
+	let n = 3;
+	let x = [1, -2, -2];
+	let y = [3, 3, 5];
+	return distSum(n, x, y);
+}
+main();

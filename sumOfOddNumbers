@@ -1,0 +1,12 @@
+function sumOfOddNumbers(a, b){
+    let sum = 0;
+    if(a > b){
+        return sum;
+    }
+	for(let i = a; i < b; i++){
+		if(i % 2 != 0 && i != a){
+				sum += i;
+		}
+	}
+	return sum;
+}

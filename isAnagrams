@@ -1,0 +1,31 @@
+function isAnagrams(s1, s2) {
+	if (s1.length != s2.length) {
+		return false;
+	}
+	let arr1 = [];
+	let arr2 = [];
+	let status;
+	for (let i = 0; i < s1.length; i++) {
+		arr1.push(s1[i]);
+	}
+	for (let i = 0; i < s2.length; i++) {
+		arr2.push(s2[i])
+	}
+	arr1.sort();
+	arr2.sort();
+	for (let i = 0; i < arr1.length; i++) {
+		if (arr1[i] == '?' || arr2[i] == '?') {
+			arr1[i] = arr2[i];
+
+		}
+		if (arr1[i] != arr2[i]) {
+			status = false;
+		} else {
+			status = true;
+		}
+	}
+	return status;
+
+}
+isAnagrams('n?ce', 'nice');
+

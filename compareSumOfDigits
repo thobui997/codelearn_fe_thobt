@@ -1,0 +1,19 @@
+function compareSumOfDigits(input){
+	let s = input.toString();
+	let arr1 = [];
+	let arr2 = [];
+	for(let i = 0; i < s.length; i++){
+		if(s[i] % 2 == 0){
+			arr1.push(s[i]);
+		}else{
+			arr2.push(s[i]);
+		}
+	}
+
+
+	let sumArr1 = arr1.reduce((a, b) => parseInt(a) + parseInt(b));
+	let sumArr2 = arr2.reduce((a, b) => parseInt(a) + parseInt(b));
+	let sub = sumArr2 - sumArr1;
+	return sub;
+}
+compareSumOfDigits(74342)

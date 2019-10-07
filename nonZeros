@@ -1,0 +1,15 @@
+function nonZeros(v, a){
+	let n  = v + a;
+
+	let n1 = n.toString().replace(/0/g, '');
+	let v1 = v.toString().replace(/0/g, '');
+	let a1 = a.toString().replace(/0/g, '');
+
+	if(parseInt(n1) == parseInt(a1) + parseInt(v1)){
+		return 'YES';
+	}else{
+		return 'NO';
+	}
+}
+
+nonZeros(102, 107)

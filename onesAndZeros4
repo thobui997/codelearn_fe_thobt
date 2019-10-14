@@ -1,0 +1,4 @@
+function onesAndZeros4(s){
+    let newS = s.replace(/010/g, '');
+    return (s.length - newS.length)/3;
+}
